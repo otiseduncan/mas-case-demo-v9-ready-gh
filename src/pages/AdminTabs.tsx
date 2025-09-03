@@ -4,13 +4,22 @@ import { CLASSES } from "../theme";
 
 const AdminTabs: React.FC = () => {
   const { pathname } = useLocation();
-  const tab = (to: string, label: string) => (
-    <Link to={to} className={`${CLASSES.btn} ${pathname === to ? 'border-red-600' : ''}`}>{label}</Link>
+  const tab = (to: string, label: string, red?: boolean) => (
+    <Link
+      to={to}
+      className={
+        red
+          ? `${CLASSES.btnPrimary} ${pathname === to ? 'ring-2 ring-red-600' : ''}`
+          : `${CLASSES.btn} ${pathname === to ? 'border-red-600' : ''}`
+      }
+    >
+      {label}
+    </Link>
   );
   return (
     <div className="flex items-center gap-2 flex-wrap mb-4">
-      {tab('/admin', 'Admin Dashboard')}
-      {tab('/admin/health', 'System Health')}
+  {tab('/admin', 'Admin Dashboard', true)}
+  {tab('/admin/health', 'System Health', true)}
     </div>
   );
 };
