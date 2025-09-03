@@ -9,7 +9,7 @@ const AdminTabs: React.FC = () => {
       to={to}
       className={
         red
-          ? `${CLASSES.btnPrimary} ${pathname === to ? 'ring-2 ring-red-600' : ''}`
+          ? `${CLASSES.btnPrimary}`
           : `${CLASSES.btn} ${pathname === to ? 'border-red-600' : ''}`
       }
     >
