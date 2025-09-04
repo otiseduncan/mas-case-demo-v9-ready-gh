@@ -49,7 +49,7 @@ const CaseDetail: React.FC = () => {
           <h1 className="text-2xl text-white font-semibold">Case {item.ro}</h1>
           <div className="flex items-center gap-2">
             <Link to="/" className={CLASSES.btnPrimary}>Back</Link>
-            {canManage && item.claimedBy === user?.username && <button className={CLASSES.btn} onClick={onRelease}>Release</button>}
+            {canManage && item.claimedBy === user?.username && <button className={CLASSES.btnSuccess} onClick={onRelease}>Release</button>}
             {item.status === "Open" && <button onClick={resolveCase} className={CLASSES.btnPrimary}>Resolve</button>}
             {item.status === "Closed" && canManage && <button onClick={reopenCase} className={CLASSES.btn}>Reopen</button>}
           </div>
