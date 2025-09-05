@@ -23,7 +23,7 @@ const SplashLogin: React.FC = () => {
       <div className="max-w-lg w-full">
         <div className="mb-8">
           <h1 className="text-3xl font-semibold text-white">MAS Case by Case</h1>
-          <p className="mt-2 text-neutral-400">Field-ready demo — no backend required</p>
+          {/* <p className="mt-2 text-neutral-400">Field-ready demo — no backend required</p> */}
         </div>
         <form onSubmit={onSubmit} className={`${CLASSES.card} p-6 text-left`}>
           <label className="block text-neutral-300 text-sm mb-1">Email</label>
